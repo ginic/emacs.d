@@ -9,12 +9,6 @@
 ;; Produce backtraces when errors occur: can be helpful to diagnose startup issues
 ;;(setq debug-on-error t)
 
-(let ((minver "27.1"))
-  (when (version< emacs-version minver)
-    (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
-(when (version< emacs-version "28.1")
-  (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
-
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (require 'init-benchmarking) ;; Measure startup time
 
@@ -107,16 +101,16 @@
 (require 'init-haml)
 (require 'init-http)
 (require 'init-python)
-(require 'init-haskell)
-(require 'init-elm)
-(require 'init-purescript)
+;; (require 'init-haskell)
+;; (require 'init-elm)
+;; (require 'init-purescript)
 (require 'init-ruby)
 (require 'init-rails)
 (require 'init-sql)
-(require 'init-ocaml)
-(require 'init-j)
-(require 'init-nim)
-(require 'init-rust)
+;; (require 'init-ocaml)
+;; (require 'init-j)
+;; (require 'init-nim)
+;; (require 'init-rust)
 (require 'init-toml)
 (require 'init-yaml)
 (require 'init-docker)
@@ -133,8 +127,8 @@
 (require 'init-paredit)
 (require 'init-lisp)
 (require 'init-sly)
-(require 'init-clojure)
-(require 'init-clojure-cider)
+;; (require 'init-clojure)
+;; (require 'init-clojure-cider)
 
 (when *spell-check-support-enabled*
   (require 'init-spelling))
@@ -145,7 +139,7 @@
 (require 'init-dash)
 
 (require 'init-ledger)
-(require 'init-lua)
+;; (require 'init-lua)
 (require 'init-uiua)
 (require 'init-zig)
 (require 'init-terminals)
